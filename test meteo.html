@@ -3,6 +3,7 @@
     <head>
         <title>Appli meteo</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script src="meteo.js"></script>
         <link href="style.css" rel="stylesheet" type="text/css">    
     </head>
@@ -18,6 +19,9 @@
             <p id="zone_prevision">
                 <div id="icon"><img id="wicone" src="" alt="Weather icon"></div>
             </p>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
         </center>
     </body>
 
