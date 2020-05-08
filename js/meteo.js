@@ -20,13 +20,20 @@ var callBackPrevision = function (data) {
     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
     $('#wicone').attr('src', iconurl);
 
-    labels = []
-    datas = []
+    heures = []
+    temperatures = []
+    rains=[]
     data.list.forEach(element => {
-        labels.push(element.dt_txt)
-        datas.push(element.main.temp)
+        heures.push(element.dt_txt)
+        temperatures.push(element.main.temp)
+        if(element.rain === undefined){
+            rains.push(0)
+        } else{
+            rains.push(element.rain["3h"])
+        }
     });
-    createWeatherChart(labels, datas)
+    createWeatherChart(heures, temperatures, rains)
+console.log(rains)
 }
 
 
