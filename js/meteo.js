@@ -19,6 +19,14 @@ var callBackPrevision = function (data) {
     var iconcode = data.list[7].weather[0].icon;
     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
     $('#wicone').attr('src', iconurl);
+
+    labels = []
+    datas = []
+    data.list.forEach(element => {
+        labels.push(element.dt_txt)
+        datas.push(element.main.temp)
+    });
+    createWeatherChart(labels, datas)
 }
 
 
