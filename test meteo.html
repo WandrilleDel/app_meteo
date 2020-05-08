@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Appli meteo</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="meteo.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css">    
+    </head>
+
+    <body>
+        <center>
+        <input id="queryLoc" type="text" value="Toulouse"/>
+        <input type="button" class="btn-meteo" value="Quel temps fait-il?" onclick="buttonClickGet()"/>
+            <p id="zone_meteo">
+                <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+            </p>
+        <input type="button" class = "btn-prevision" value="Quel temps pour demain?" onclick="buttonPrevision()"/>
+            <p id="zone_prevision">
+                <div id="icon"><img id="wicone" src="" alt="Weather icon"></div>
+            </p>
+        </center>
+    </body>
+
+
+
+
+</html>
