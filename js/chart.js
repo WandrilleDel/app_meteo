@@ -13,12 +13,12 @@ function createWeatherChart(heures, temperatures, precipitations){
         data: {
             
             datasets: [{
-                label: 'Température',
+                label: 'Température (°C)',
                 borderColor: 'rgb(255, 99, 132)',
                 data: temperatures,
                 type: 'line'
             },{
-                label: 'Précipitaions',
+                label: 'Précipitaions (mm)',
                 data: precipitations,
                 borderColor: 'rgb(21, 46, 231)',
                 backgroundColor: 'rgb(21, 46, 231)',
@@ -27,6 +27,26 @@ function createWeatherChart(heures, temperatures, precipitations){
             labels: heures
         },
 
+        // Configuration options go here
+        options: {}
+    });
+}
+function createWindChart(vent, heures){
+    var ctx = document.getElementById('myNewChart').getContext('2d');
+    var windChart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels:heures,
+            datasets: [{
+                label: 'Vitesse du vent (km/h)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: vent
+            }]
+        },
+    
         // Configuration options go here
         options: {}
     });

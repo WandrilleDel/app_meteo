@@ -2,8 +2,13 @@ body{
     background: url(https://upload.wikimedia.org/wikipedia/commons/6/69/World_map_blank_gmt.svg) no-repeat;
     background-size: 100%;
 }
+h1{
+    padding-left: 38%;
+    font-family: OCR A Std, monospace;
+    color:rgb(255, 75, 3) ;
+}
 center{
-    padding: 20%;
+    padding: 5%;
 }
 .btn-meteo{
     width:200px;
@@ -11,25 +16,17 @@ center{
     padding:10px;
     border: none;
     border-radius: 10px;
-    background-color:rgb(119, 239, 255);
+    background-color:rgb(56, 74, 241);
     overflow:hidden;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-    
 }
-.btn-meteo:hover{
-    width:40px;
-    height:40px;
-    background-color:rgb(87, 211, 65);
-    -webkit-transform:rotateZ(360deg);
-    -moz-transform:rotateZ(360deg);
-    -ms-transform:rotateZ(360deg);
-    -o-transform:rotateZ(360deg);
-    transform:rotateZ(360deg);
-}
+.btn-meteo:hover {
+    background: #2acf40;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    }
 
 .btn-prevision{
     overflow:hidden;
@@ -40,81 +37,11 @@ center{
     border-radius: 5px;
     border: none;
 }
-.btn-prevision:hover{
-    width:40px;
-    height:40px;
-    background-color:rgb(83, 172, 255);
-    -webkit-animation: anim_trois 1.2s;
-    -moz-animation: anim_trois 1.2s;
-    -ms-animation: anim_trois 1.2s;
-    -o-animation: anim_trois 1.2s;
-    animation: anim_trois 1.2s;
-}
-@-moz-keyframes anim_trois {
-    0% {
-        width:200px;
-        -moz-transform: perspective( 600px ) rotateY( 0deg );
+.btn-prevision:hover {
+    background: #2acf40;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
     }
-    50% {
-        width:40px;
-        height:40px;
-        -moz-transform: perspective( 600px ) rotateY( 0deg );
-    }
-    100% {
-        width:40px;
-        height:40px;
-        background-color:#60121C;
-        -moz-transform: perspective( 600px ) rotateY( 180deg );
-    }
-}
-@-ms-keyframes anim_trois {
-    0% {
-        width:200px;
-        -ms-transform: perspective( 600px ) rotateY( 0deg );
-    }
-    50% {
-        width:40px;
-        height:40px;
-        -ms-transform: perspective( 600px ) rotateY( 0deg );
-    }
-    100% {
-        width:40px;
-        height:40px;
-        background-color:#60121C;
-        -ms-transform: perspective( 600px ) rotateY( 180deg );
-    }
-}
-@-o-keyframes anim_trois {
-    0% {
-        width:200px;
-        -o-transform: perspective( 600px ) rotateY( 0deg );
-    }
-    50% {
-        width:40px;
-        height:40px;
-        -o-transform: perspective( 600px ) rotateY( 0deg );
-    }
-    100% {
-        width:40px;
-        height:40px;
-        background-color:#60121C;
-        -o-transform: perspective( 600px ) rotateY( 180deg );
-    }
-}
-@keyframes anim_trois {
-    0% {
-        width:200px;
-        transform: perspective( 600px ) rotateY( 0deg );
-    }
-    50% {
-        width:40px;
-        height:40px;
-        transform: perspective( 600px ) rotateY( 0deg );
-    }
-    100% {
-        width:40px;
-        height:40px;
-        background-color:#60121C;
-        transform: perspective( 600px ) rotateY( 180deg );
-    }
-}
