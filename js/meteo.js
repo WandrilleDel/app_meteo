@@ -11,6 +11,7 @@ var callBackGetSuccess = function (data) {
 
 
 }
+
 var callBackPrevision = function (data) {
     console.log("donnees api", data)
     var element = document.getElementById ("zone_prevision");
@@ -41,7 +42,6 @@ var callBackPrevision = function (data) {
     );   
     createWeatherChart(heures, temperatures, rains)
     createWindChart(vent, heures)
-   
 }
 
 
@@ -56,7 +56,7 @@ function buttonClickGet(){
     //alert("second success");
     })
     .fail(function(){
-        alert("error");
+        alert("Veuillez inscrire une ville");
     })
     .always(function(){
     //alert("finished");
@@ -71,7 +71,7 @@ function buttonPrevision(){
         //alert("second success");
         })
     .fail(function(){
-        alert("error");
+        alert("Veuillez inscrire une ville");
         })
     .always(function(){
         //alert("finished");

@@ -6,24 +6,27 @@
     </head>
 
     <body>
-        <h1><strong>WanWan Meteo Beta</strong></h1>
-        <center>
-        <input id="queryLoc" type="text" value="Toulouse"/>
-        <input type="button" class="btn-meteo" value="Temps actuel" onclick="buttonClickGet()"/>
-            <p id="zone_meteo">
-                <div id="icon"><img id="wicon" src="" ></div>
-            </p>
-        <input type="button" class = "btn-prevision" value="Pr&#233;visions" onclick="buttonPrevision()"/>
-            <p id="zone_prevision">
-                <div id="icon"><img id="wicone" src="" ></div>
-            </p>
-        <div>
-            <canvas id="myChart"></canvas>
-        </div>
-        <div>
-            <canvas id="myNewChart"></canvas>
-        </div>
-    </center>
+        <h1><strong>WanWan Meteo Beta</strong>
+            <h4>
+                <center>
+                <input id="queryLoc" type="text" value=""/>
+                <input type="button" class="btn-meteo" value="Temps actuel" onclick="buttonClickGet()"/>
+                <input type="button" class = "btn-meteo" value="Pr&#233;visions" onclick="buttonPrevision()"/>
+                    <p id="zone_meteo">
+                        <div id="icon"><img id="wicon" src="" ></div>
+                    <p id="zone_prevision">
+                        <div id="icon"><img id="wicone" src="" ></div>
+                    </center>
+            </h4>
+        </h1>
+        <section>
+            <div>
+                <canvas id="myChart" width="500" height="150"></canvas>
+            </div>
+            <div>
+                <canvas id="myNewChart"  width="500" height="150"></canvas>
+            </div>
+        </section>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>

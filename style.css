@@ -3,19 +3,21 @@ body{
     background-size: 100%;
 }
 h1{
-    padding-left: 38%;
+    padding-left: 70%;
     font-family: OCR A Std, monospace;
     color:rgb(255, 75, 3) ;
 }
-center{
-    padding: 5%;
+h4{
+    padding-top: 10%;
 }
+
 .btn-meteo{
+    display:inline-block;
+    margin:10px 2.5% 10px 2.5%;
     width:200px;
     height:40px;
-    padding:10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color:rgb(56, 74, 241);
     overflow:hidden;
 }
@@ -27,21 +29,7 @@ center{
     box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
     }
-
-.btn-prevision{
-    overflow:hidden;
-    width:200px;
-    height:40px;
-    padding:10px;
-    background-color:rgb(220, 223, 78);
-    border-radius: 5px;
-    border: none;
+section{
+   padding-left: 15%;
+   padding-right: 15%;
 }
-.btn-prevision:hover {
-    background: #2acf40;
-    letter-spacing: 1px;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-    transition: all 0.4s ease 0s;
-    }
