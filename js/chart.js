@@ -2,10 +2,12 @@
 //         labels: ['8h', '9h', '10h', '11h'],
 //         data: [11, 12, 11, 15]
 // createWeatherChart(['8h', '9h', '10h', '11h'], [11, 12, 11, 15])
-
+var chart
+var windChart
 function createWeatherChart(heures, temperatures, precipitations){
     var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
+    if( chart != undefined ) chart.destroy()
+    chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'bar',
 
@@ -33,7 +35,8 @@ function createWeatherChart(heures, temperatures, precipitations){
 }
 function createWindChart(vent, heures){
     var ctx = document.getElementById('myNewChart').getContext('2d');
-    var windChart = new Chart(ctx, {
+    if( windChart != undefined ) windChart.destroy()
+    windChart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
 
