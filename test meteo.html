@@ -6,12 +6,20 @@
     </head>
 
     <body>
+        <div id="barreMenu">
+            <ul id="menu">
+            <li><a href="http://www.meteofrance.com/previsions-meteo-france/animation/satellite/france" target="_blank">Satellite</a></li>
+            <li><a href="http://www.meteofrance.com/previsions-meteo-france/previsions-pluie/" target="_blank">Pluie dans l'heure</a></li>
+            <li><a href="http://www.meteociel.fr/prevville.php" target="_blank">Prévisions meteociel</a></li>
+            <li><a href="http://www.meteociel.fr/modeles/gfs/precipitations-hd/3h.htm" target="_blank">Précipitations gfs</a></li>
+            </ul>
+        </div>
         <h1><strong>WanWan Meteo Beta</strong>
             <h4>
                 <center>
                 <input id="queryLoc" type="text" value=""/>
-                <input type="button" class="btn-meteo" value="Temps actuel" onclick="buttonClickGet()"/>
-                <input type="button" class = "btn-meteo" value="Pr&#233;visions" onclick="buttonPrevision()"/>
+                <input type="button" class="btn-meteo" value="Conditions actuelles" onclick="buttonClickGet()"/>
+                <input type="button" class = "btn-meteo" value="Pr&#233;visions 5j" onclick="buttonPrevision()"/>
                     <p id="zone_meteo">
                         <div id="icon"><img id="wicon" src="" ></div>
                     <p id="zone_prevision">
