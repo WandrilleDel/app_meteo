@@ -3,7 +3,7 @@ var callBackGetSuccess = function (data) {
     console.log("donnees api", data)
     //alert ("temperature : " + data.main.temp + "F" + " pression: " + data.main.pressure + " Hpa");
     var element = document.getElementById("zone_meteo");
-    element.innerHTML = "La temperature actuelle a " + data.name + " est de "  + data.main.temp + " \u00b0C" + ", et la pression est de " + data.main.pressure + " Hpa<br>" + "Les conditions actuelles sont: " + data.weather[0].description + ", la vitesse du vent est de " + data.wind.speed*3.6 + " km/h"
+    element.innerHTML = "La temperature actuelle a " + data.name + " est de "  + data.main.temp + " \u00b0C" + ", et la pression est de " + data.main.pressure + " Hpa<br>" + "Les conditions actuelles sont: " + data.weather[0].description + ", la vitesse du vent est de " + Math.floor(data.wind.speed*3.6) + " km/h"
     
     var iconcode = data.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -15,7 +15,7 @@ var callBackGetSuccess = function (data) {
 var callBackPrevision = function (data) {
     console.log("donnees api", data)
     var element = document.getElementById ("zone_prevision");
-    element.innerHTML = "Demain matin, a " + data.city.name+ ", il fera: " + data.list[7].main.temp + "\u00b0C," + " la pression sera d'environ " + data.list[7].main.pressure + " Hpa<br>" + "Les conditions seront: " + data.list[7].weather[0].description + ", la vitesse du vent sera de " + data.list[7].wind.speed*3.6 + " km/h"
+    element.innerHTML = "Demain matin, a " + data.city.name+ ", il fera: " + data.list[7].main.temp + "\u00b0C," + " la pression sera d'environ " + data.list[7].main.pressure + " Hpa<br>" + "Les conditions seront: " + data.list[7].weather[0].description + ", la vitesse du vent sera de " + Math.floor(data.list[7].wind.speed*3.6) + " km/h"
     
     var iconcode = data.list[7].weather[0].icon;
     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -37,7 +37,7 @@ var callBackPrevision = function (data) {
     vent = []
     data.list.forEach(element => {
         heures.push(element.dt_txt)
-        vent.push(element.wind.speed*3.6)
+        vent.push(Math.floor(element.wind.speed*3.6))
         }
     );   
     createWeatherChart(heures, temperatures, rains)
