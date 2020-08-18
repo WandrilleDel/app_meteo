@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Appli meteo</title>
-        <link href="style.css" rel="stylesheet" type="text/css"> 
-        <meta 
-        name="viewport"
-        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes"
-    >
 
-    </head>
+<head>
+    <title>Appli meteo</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
 
-    <body>
-        <div id="barreMenu">
-            <ul id="menu">
-            <li><a href="http://www.meteofrance.com/previsions-meteo-france/animation/satellite/france" target="_blank">Satellite</a></li>
-            <li><a href="http://www.meteofrance.com/previsions-meteo-france/previsions-pluie/" target="_blank">Pluie dans l'heure</a></li>
+</head>
+
+<body>
+    <div id="barreMenu">
+        <ul id="menu">
+            <li><a href="http://www.meteofrance.com/previsions-meteo-france/animation/satellite/france"
+                    target="_blank">Satellite</a></li>
+            <li><a href="http://www.meteofrance.com/previsions-meteo-france/previsions-pluie/" target="_blank">Pluie
+                    dans l'heure</a></li>
             <li><a href="http://www.meteociel.fr/prevville.php" target="_blank">Prévisions meteociel</a></li>
-            <li><a href="http://www.meteociel.fr/modeles/gfs/precipitations-hd/3h.htm" target="_blank">Précipitations gfs</a></li>
-            </ul>
+            <li><a href="http://www.meteociel.fr/modeles/gfs/precipitations-hd/3h.htm" target="_blank">Précipitations
+                    gfs</a></li>
+        </ul>
+    </div>
+    <h1><strong>WanWan Meteo Beta</strong></h1>
+
+    <div class="previsions">
+        <input id="queryLoc" type="text" value="" />
+        <input type="button" class="btn-meteo" value="Conditions actuelles" onclick="buttonClickGet()" />
+        <input type="button" class="btn-meteo" value="Pr&#233;visions 5j" onclick="buttonPrevision()" />
+        <p id="zone_meteo">
+        <div id="icon"><img id="wicon" src=""></div>
+        <p id="zone_prevision">
+        <div id="icon"><img id="wicone" src=""></div>
+    </div>
+
+
+    <section>
+        <div>
+            <canvas id="myChart" width="500" height="150"></canvas>
         </div>
-        <h1><strong>WanWan Meteo Beta</strong>
-            <h4>
-                <center>
-                <input id="queryLoc" type="text" value=""/>
-                <input type="button" class="btn-meteo" value="Conditions actuelles" onclick="buttonClickGet()"/>
-                <input type="button" class = "btn-meteo" value="Pr&#233;visions 5j" onclick="buttonPrevision()"/>
-                    <p id="zone_meteo">
-                        <div id="icon"><img id="wicon" src="" ></div>
-                    <p id="zone_prevision">
-                        <div id="icon"><img id="wicone" src="" ></div>
-                </center>
-            </h4>
-        </h1>
-        <section>
-            <div>
-                <canvas id="myChart" width="500" height="150"></canvas>
-            </div>
-            <div>
-                <canvas id="myNewChart"  width="500" height="150"></canvas>
-            </div>
-        </section>
-    </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="js/meteo.js"></script>
-    <script src="js/chart.js"></script>
+        <div>
+            <canvas id="myNewChart" width="500" height="150"></canvas>
+        </div>
+    </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="js/meteo.js"></script>
+<script src="js/chart.js"></script>
+
 </html>

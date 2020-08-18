@@ -50,14 +50,18 @@ html{
 h1{
     padding-left: 70%;
     font-family: OCR A Std, monospace;
-    color:rgb(255, 75, 3) ;
+    color:rgb(255, 75, 3);
 }
 
-h4{
+.previsions{
     padding-top: 10%;
+    text-align: center;
+    font-size: 0.8em;
 }
 p{
     font-family: "Trebuchet MS";
+    size: 5px;
+    
 }
 .btn-meteo{
     display:inline-block;
