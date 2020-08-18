@@ -47,11 +47,12 @@
 html{
     background: url(https://upload.wikimedia.org/wikipedia/commons/6/69/World_map_blank_gmt.svg) no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
 }
 h1{
     padding-left: 70%;
     font-family: OCR A Std, monospace;
-    color:rgb(255, 75, 3);
+    color:rgb(255, 97, 24);
 }
 
 .previsions{
