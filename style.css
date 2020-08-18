@@ -9,6 +9,7 @@
 }
 #menu{
     font-family: "Trebuchet MS";
+    font-size: 75%;
     margin-left: auto;
     margin-right: auto;    
     display: table;
@@ -66,7 +67,7 @@ p{
 .btn-meteo{
     display:inline-block;
     margin:10px 2.5% 10px 2.5%;
-    width:200px;
+    width:11em;
     height:40px;
     border: none;
     border-radius: 5px;
@@ -82,6 +83,6 @@ p{
     transition: all 0.4s ease 0s;
     }
 section{
-   padding-left: 15%;
-   padding-right: 15%;
+   padding: 10%;
 }
+
